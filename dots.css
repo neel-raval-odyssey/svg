@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #292929;
+    position: relative;
+}
+
+#dotsCanvas {
+    width: 100vw;
+    height: 100vh;
+    animation: animate-mask 60s linear infinite;
+    mask-image: url(https://cdn.prod.website-files.com/656f60dc2d85b496beec7c35/657977f05dcfc3a99e198a10_perlin-noise.webp);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#Layer_1 {
+    position: absolute;
+    z-index: 1;
+    transform: translate(25%, 10%);
+}
+
+@keyframes animate-mask {
+    0% {
+        -webkit-mask-position: 0 0;
+    }
+
+    100% {
+        -webkit-mask-position: 1000px 1000px;
+    }
+}
